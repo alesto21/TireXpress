@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en" class="FelgKalkulator">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <script
+      src="https://kit.fontawesome.com/1165876da6.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Dekkforhandler</title>
+    <script src="/Pages/JavaScrips/FelgKalkulator.js"></script>
+    <link rel="stylesheet" href="/Pages/Main/Footer.css" />
+    <link rel="stylesheet" href="/Pages/Kalkulator Sider/FelgKalkulator.css" />
+
+    <link
+      rel="stylesheet"
+      href="Media-Screens/Media-Small.css"
+      media="screen and (max-width: 767px)"
+    />
+    <link
+      rel="stylesheet"
+      href="Media-Screens/Media-Medium.css"
+      media="screen and (min-width: 768px) and (max-width: 991px)"
+    />
+  </head>
+
+  <body>
+    <header>
+      <a href="/Pages/Main/index.html" class="logo">Tire-Xpress</a>
+      <div class="mobile-nav">
+        <div class="bar-icon"></div>
+        <ul>
+          <li><a href="/Pages/Produkt Sider HTML/Dekk.html">Dekk</a></li>
+          <li><a href="/Pages/Produkt Sider HTML/Felg.html">Felg</a></li>
+          <li>
+            <a href="/Pages/Kalkulator Sider/DekkKalkulator.html"
+              >Dekk-Kalkulator</a
+            >
+          </li>
+          <li>
+            <a href="/Pages/Kalkulator Sider/FelgKalkulator.html"
+              >Felg-Kalkulator</a
+            >
+          </li>
+          <li><a href="/Pages/Main/LogInn.html">Min Profil</a></li>
+          <li class="cart-icon">
+            <a href="cart-page.html">
+              <img
+                src="/Pages/Images/ShoppingCartIcon.png"
+                alt="Shopping Cart"
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="thin-navbar">
+        <a href="/Pages/Produkt Sider HTML/Dekk.html">Dekk</a>
+        <a href="/Pages/Produkt Sider HTML/Felg.html">Felg</a>
+        <a href="/Pages/Kalkulator Sider/DekkKalkulator.html"
+          >Dekk kalkulator</a
+        >
+        <a href="/Pages/Kalkulator Sider/FelgKalkulator.html"
+          >Felg kalkulator</a
+        >
+        <a href="#" class="cart-icon">
+          <img src="/Pages/Images/ShoppingCartIcon.png" alt="Shopping Cart" />
+        </a>
+      </div>
+    </header>
+
+    <section class="banner"></section>
+    <h1 class="section-title">Felg kalkulator</h1>
+
+    <script type="text/javascript">
+      window.addEventListener("scroll", function () {
+        if (window.innerWidth > 767) {
+          var header = document.querySelector("header");
+          header.classList.toggle("sticky", window.scrollY > 0);
+        }
+      });
+
+      window.addEventListener("DOMContentLoaded", function () {
+        function updateScreenSizeClass() {
+          var htmlElement = document.documentElement;
+          var mediumScreenClass = "medium-screen";
+
+          if (window.innerWidth >= 768 && window.innerWidth <= 991) {
+            htmlElement.classList.add(mediumScreenClass);
+          } else {
+            htmlElement.classList.remove(mediumScreenClass);
+          }
+        }
+
+        updateScreenSizeClass();
+
+        window.addEventListener("resize", updateScreenSizeClass);
+      });
+    </script>
+
+    <div class="containerFelg">
+      <div class="calculator">
+        <h2 class="H2Felg">Felg Kalkulator</h2>
+        <form id="rim-calculator">
+          <div class="form-group">
+            <label for="oldWidth">Original felg bredde (inches):</label>
+            <select id="oldWidth" class="form-control" required>
+              <!-- felg bredde -->
+              <script>
+                for (var i = 4; i <= 12; i += 0.5) {
+                  document.write(
+                    '<option value="' + i + '">' + i + '"</option>'
+                  );
+                }
+              </script>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="oldOffset"
+              >Original felg innpress (ET, millimeter):</label
+            >
+            <select id="oldOffset" class="form-control" required>
+              <!-- felg offset -->
+              <script>
+                for (var i = -20; i <= 65; i++) {
+                  document.write(
+                    '<option value="' + i + '">ET' + i + "</option>"
+                  );
+                }
+              </script>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="newWidth">Ny felg bredde (inches):</label>
+            <select id="newWidth" class="form-control" required>
+              <!-- felg bredde meny -->
+              <script>
+                for (var i = 4; i <= 12; i += 0.5) {
+                  document.write(
+                    '<option value="' + i + '">' + i + '"</option>'
+                  );
+                }
+              </script>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="newOffset">Ny felg innpress (ET, millimeter):</label>
+            <select id="newOffset" class="form-control" required>
+              <!-- felg offset -->
+              <script>
+                for (var i = -20; i <= 65; i++) {
+                  document.write(
+                    '<option value="' + i + '">ET' + i + "</option>"
+                  );
+                }
+              </script>
+            </select>
+          </div>
+          <button type="submit" class="btn">Beregn endringer</button>
+        </form>
+      </div>
+
+      <div class="result">
+        <h3>Resultater:</h3>
+        <h4 id="resultMessage" style="display: none">
+          Dine resultater er klare!
+        </h4>
+        <p>Indre felgkant flyttes: <span id="innerRimChange"></span></p>
+        <p>Ytre felgkant flyttes: <span id="outerRimChange"></span></p>
+        <p>Endring av innpress: <span id="offsetChange"></span></p>
+        <p>Endring av sporvidde: <span id="trackWidthChange"></span></p>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <h3>Kontakt oss</h3>
+          <p>E-post: TireX@info.no</p>
+          <p>Tlf: +47 457 33 876</p>
+          <p>
+            Addresse:
+            <a
+              href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x4641073dd575b493:0xf89c8554cc8c4621?sa=X&ved=2ahUKEwi9uv2hoNuEAxV7PxAIHeplBh0Q4kB6BAg0EAA"
+              target="_blank"
+              >Osloveien 16 3511 Hønefoss</a
+            >
+          </p>
+        </div>
+        <div class="footer-content">
+          <h3>Snarveier</h3>
+          <ul class="list">
+            <li><a href="Pages/Om-Oss.html">Om oss</a></li>
+            <li><a href="Pages/Personvern.html">Personvern</a></li>
+            <li><a href="Pages/Admin.html">Min Profil</a></li>
+          </ul>
+        </div>
+        <div class="footer-content">
+          <h3>Kategorier</h3>
+          <ul class="list">
+            <li><a href="#">Vinterdekk</a></li>
+
+            <li><a href="Felg.html">Felg</a></li>
+            <li><a href="#">Dekk</a></li>
+          </ul>
+        </div>
+        <div class="footer-content">
+          <h3>Andre</h3>
+          <ul class="list">
+            <li><a href="Pages/Personvern.html">Info</a></li>
+            <li><a href="LogInn.html">Admin</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="bottom-bar">
+        <p>&copy; @Tire-Xpress 2023</p>
+      </div>
+    </footer>
+  </body>
+</html>

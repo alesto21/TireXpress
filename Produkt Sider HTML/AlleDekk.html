@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en" class="Dekk">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <script
+      src="https://kit.fontawesome.com/1165876da6.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/1165876da6.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Alle dekk</title>
+    <link rel="stylesheet" href="/Pages/Produkt Sider CSS/AlleDekk.css" />
+    <link rel="stylesheet" href="/Pages/Main/Footer.css" />
+
+    <link
+      rel="stylesheet"
+      href="Media-Screens/Media-Small.css"
+      media="screen and (max-width: 767px)"
+    />
+    <link
+      rel="stylesheet"
+      href="Media-Screens/Media-Medium.css"
+      media="screen and (min-width: 768px) and (max-width: 991px)"
+    />
+    <script src="">
+      /Pages/JavaScrips/AlleDekk.js
+    </script>
+  </head>
+
+  <body>
+    <header>
+      <a href="/Pages/Main/index.html" class="logo">Tire-Xpress</a>
+      <div class="mobile-nav">
+        <div class="bar-icon"></div>
+        <ul>
+          <li><a href="/Pages/Produkt Sider HTML/Dekk.html">Dekk</a></li>
+          <li><a href="/Pages/Produkt Sider HTML/Felg.html">Felg</a></li>
+          <li>
+            <a href="/Pages/Kalkulator Sider/DekkKalkulator.html"
+              >Dekk-Kalkulator</a
+            >
+          </li>
+          <li>
+            <a href="/Pages/Kalkulator Sider/FelgKalkulator.html"
+              >Felg-Kalkulator</a
+            >
+          </li>
+          <li><a href="/Pages/Main/LogInn.html">Min Profil</a></li>
+          <li class="cart-icon">
+            <a href="cart-page.html">
+              <img
+                src="/Pages/Images/ShoppingCartIcon.png"
+                alt="Shopping Cart"
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="thin-navbar">
+        <a href="/Pages/Produkt Sider HTML/Dekk.html">Dekk</a>
+        <a href="/Pages/Produkt Sider HTML/Felg.html">Felg</a>
+        <a href="/Pages/Kalkulator Sider/DekkKalkulator.html"
+          >Dekk kalkulator</a
+        >
+        <a href="/Pages/Kalkulator Sider/FelgKalkulator.html"
+          >Felg kalkulator</a
+        >
+        <a href="#" class="cart-icon">
+          <img src="/Pages/Images/ShoppingCartIcon.png" alt="Shopping Cart" />
+        </a>
+      </div>
+    </header>
+
+    <script type="text/javascript">
+      window.addEventListener("scroll", function () {
+        if (window.innerWidth > 767) {
+          var header = document.querySelector("header");
+          header.classList.toggle("sticky", window.scrollY > 0);
+        }
+      });
+
+      window.addEventListener("DOMContentLoaded", function () {
+        function updateScreenSizeClass() {
+          var htmlElement = document.documentElement;
+          var mediumScreenClass = "medium-screen";
+
+          if (window.innerWidth >= 768 && window.innerWidth <= 991) {
+            htmlElement.classList.add(mediumScreenClass);
+          } else {
+            htmlElement.classList.remove(mediumScreenClass);
+          }
+        }
+
+        updateScreenSizeClass();
+
+        window.addEventListener("resize", updateScreenSizeClass);
+      });
+    </script>
+
+    <section class="banner"></section>
+    <h1 class="section-title">Alle dekk</h1>
+
+    <div class="product-cards-container">
+      <!-- Product Card 1 -->
+      <div class="product-card">
+        <a href="ProduktSide.html?productId=product1">
+          <img src="/Pages/Images/picture3.jpg" alt="Product 1" />
+          <h3>Continental 1</h3>
+          <p>
+            Her finner du alle dekk som er <br />
+            tilgjengelige hos oss!
+          </p>
+        </a>
+      </div>
+
+      <!-- Product Card 2 -->
+      <div class="product-card">
+        <a href="ProduktSide.html?productId=product2">
+          <img src="/Pages/Images/picture3.jpg" alt="Product 2" />
+          <h3>Continental 1</h3>
+          <p>
+            Her finner du alle dekk som er <br />
+            tilgjengelige hos oss!
+          </p>
+        </a>
+      </div>
+
+      <!-- Product Card 3 -->
+      <div class="product-card">
+        <img src="/Pages/Images/picture3.jpg" alt="Product 3" />
+        <h3>Continental 3</h3>
+        <p>
+          Pirelli er blant verdens fem største dekkprodusenter og leverer noen
+          av markedets beste premium-dekk.
+        </p>
+      </div>
+
+      <!-- Product Card 4 -->
+      <div class="product-card">
+        <img src="/Pages/Images/picture3.jpg" alt="Product 4" />
+        <h3>Continental 4</h3>
+        <p>
+          Når du investerer i Triangle, kan du være sikker på at dekkene er
+          produsert i samsvar med de høyeste standardene og kontrollprosedyrene
+          i markedet.
+        </p>
+      </div>
+
+      <!-- Product Card 5 -->
+      <div class="product-card">
+        <img src="/Pages/Images/picture3.jpg" alt="Product 5" />
+        <h3>Continental 5</h3>
+        <p>
+          Maxxis, vinneren av NAF/Motor sin sommerdekktest i 2021, tilbyr god
+          kvalitet til konkurransedyktige priser.
+        </p>
+      </div>
+
+      <!-- Product Card 6 -->
+      <div class="product-card">
+        <img src="/Pages/Images/picture3.jpg" alt="Product 6" />
+        <h3>Continental 6</h3>
+        <p>
+          Nokian er en skandinavisk dekkprodusent som er spesialdesignet for
+          nordiske kjøreforhold og veier, og de bidrar til å gjøre
+          kjøreopplevelsen til en drøm.
+        </p>
+      </div>
+
+      <!-- Product Card 7 -->
+      <div class="product-card">
+        <img src="/Pages/Images/picture3.jpg" alt="Product 7" />
+        <h3>Continental 7</h3>
+        <p>
+          Kumho er en dekkprodusent som leverer ypperste koreansk kvalitet, med
+          fokus på komfort, stabilitet og trygghet som hovedområder for deres
+          dekkprodukter.
+        </p>
+      </div>
+
+      <div class="product-card">
+        <img src="/Pages/Images/picture3.jpg" alt="Product 7" />
+        <h3>Continental 8</h3>
+        <p>
+          Kumho er en dekkprodusent som leverer ypperste koreansk kvalitet, med
+          fokus på komfort, stabilitet og trygghet som hovedområder for deres
+          dekkprodukter.
+        </p>
+      </div>
+
+      <div class="product-card">
+        <img src="/Pages/Images/picture3.jpg" alt="Product 7" />
+        <h3>Continental 9</h3>
+        <p>
+          Kumho er en dekkprodusent som leverer ypperste koreansk kvalitet, med
+          fokus på komfort, stabilitet og trygghet som hovedområder for deres
+          dekkprodukter.
+        </p>
+      </div>
+
+      <div class="product-card">
+        <img src="/Pages/Images/picture3.jpg" alt="Product 7" />
+        <h3>Continental 10</h3>
+        <p>
+          Kumho er en dekkprodusent som leverer ypperste koreansk kvalitet, med
+          fokus på komfort, stabilitet og trygghet som hovedområder for deres
+          dekkprodukter.
+        </p>
+      </div>
+
+      <div class="product-card">
+        <img src="/Pages/Images/picture3.jpg" alt="Product 7" />
+        <h3>Continental 11</h3>
+        <p>
+          Kumho er en dekkprodusent som leverer ypperste koreansk kvalitet, med
+          fokus på komfort, stabilitet og trygghet som hovedområder for deres
+          dekkprodukter.
+        </p>
+      </div>
+
+      <div class="product-card">
+        <img src="/Pages/Images/picture3.jpg" alt="Product 7" />
+        <h3>Continental 12</h3>
+        <p>
+          Kumho er en dekkprodusent som leverer ypperste koreansk kvalitet, med
+          fokus på komfort, stabilitet og trygghet som hovedområder for deres
+          dekkprodukter.
+        </p>
+      </div>
+
+      <div class="product-card">
+        <img src="/Pages/Images/picture3.jpg" alt="Product 7" />
+        <h3>Continental 13</h3>
+        <p>
+          Kumho er en dekkprodusent som leverer ypperste koreansk kvalitet, med
+          fokus på komfort, stabilitet og trygghet som hovedområder for deres
+          dekkprodukter.
+        </p>
+      </div>
+
+      <div class="product-card">
+        <img src="/Pages/Images/picture3.jpg" alt="Product 7" />
+        <h3>Continental 14</h3>
+        <p>
+          Kumho er en dekkprodusent som leverer ypperste koreansk kvalitet, med
+          fokus på komfort, stabilitet og trygghet som hovedområder for deres
+          dekkprodukter.
+        </p>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <h3>Kontakt oss</h3>
+          <p>E-post: TireX@info.no</p>
+          <p>Tlf: +47 457 33 876</p>
+          <p>
+            Addresse:
+            <a
+              href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x4641073dd575b493:0xf89c8554cc8c4621?sa=X&ved=2ahUKEwi9uv2hoNuEAxV7PxAIHeplBh0Q4kB6BAg0EAA"
+              target="_blank"
+              >Osloveien 16 3511 Hønefoss</a
+            >
+          </p>
+        </div>
+        <div class="footer-content">
+          <h3>Snarveier</h3>
+          <ul class="list">
+            <li><a href="Pages/Om-Oss.html">Om oss</a></li>
+            <li><a href="Pages/Personvern.html">Personvern</a></li>
+            <li><a href="Pages/Admin.html">Min Profil</a></li>
+          </ul>
+        </div>
+        <div class="footer-content">
+          <h3>Kategorier</h3>
+          <ul class="list">
+            <li><a href="#">Vinterdekk</a></li>
+
+            <li><a href="Felg.html">Felg</a></li>
+            <li><a href="#">Dekk</a></li>
+          </ul>
+        </div>
+        <div class="footer-content">
+          <h3>Andre</h3>
+          <ul class="list">
+            <li><a href="Pages/Personvern.html">Info</a></li>
+            <li><a href="LogInn.html">Admin</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="bottom-bar">
+        <p>&copy; @Tire-Xpress 2023</p>
+      </div>
+    </footer>
+  </body>
+</html>

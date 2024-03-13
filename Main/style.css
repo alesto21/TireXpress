@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.googleapis.com/css?family=Poppoins:200,300,400,500,600,700,800,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppoins", sans-serif;
+}
+
+body {
+  background: #000;
+  min-height: 120vh;
+}
+
+.banner {
+  margin: 0;
+  position: relative;
+  width: 100%;
+  height: 120vh;
+  background: url(/Pages/Images/Banner1.jpg);
+  background-size: cover;
+  overflow: hidden;
+  padding-bottom: 0;
+}
+/* Image Buttons: */
+.image-buttons {
+  position: absolute;
+  top: 58%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 55px;
+}
+
+.button {
+  position: relative;
+  width: 300px;
+  height: 450px;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  border: 2px solid #a8a3a3;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px solid #fff;
+  border-radius: 15px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.button img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+}
+
+.button-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.button:hover .button-content {
+  opacity: 1;
+}
+
+.button-content p {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 545;
+  font-family: "Poppoins", sans-serif;
+  margin: 0;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.8);
+  text-shadow: 2px 2x 4px rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  border-radius: 8px;
+}
+
+.button-content p::before,
+.button-content p::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 0;
+  background: #f18930;
+  transition: width 0.3s ease;
+}
+
+.button-content p::before {
+  left: 0;
+  bottom: 0;
+}
+.button-content p::after {
+  right: 0;
+  bottom: 0;
+}
+.button-content p:hover::before,
+.button-content p:hover::after {
+  width: 50%;
+}
+
+.button:hover .button-content p {
+  background-color: rgba(0, 0, 0, 0.9);
+}

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en" class="Felg">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <script
+      src="https://kit.fontawesome.com/1165876da6.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Felg Merker</title>
+    <link rel="stylesheet" href="/Pages/Produkt Sider CSS/Dekk.css" />
+    <link rel="stylesheet" href="/Pages/Main/Footer.css" />
+
+    <link
+      rel="stylesheet"
+      href="Media-Screens/Media-Small.css"
+      media="screen and (max-width: 767px)"
+    />
+    <link
+      rel="stylesheet"
+      href="Media-Screens/Media-Medium.css"
+      media="screen and (min-width: 768px) and (max-width: 991px)"
+    />
+  </head>
+
+  <body>
+    <header>
+      <a href="/Pages/Main/index.html" class="logo">Tire-Xpress</a>
+      <div class="mobile-nav">
+        <div class="bar-icon"></div>
+        <ul>
+          <li><a href="/Pages/Produkt Sider HTML/Dekk.html">Dekk</a></li>
+          <li><a href="/Pages/Produkt Sider HTML/Felg.html">Felg</a></li>
+          <li>
+            <a href="/Pages/Kalkulator Sider/DekkKalkulator.html"
+              >Dekk-Kalkulator</a
+            >
+          </li>
+          <li>
+            <a href="/Pages/Kalkulator Sider/FelgKalkulator.html"
+              >Felg-Kalkulator</a
+            >
+          </li>
+          <li><a href="/Pages/Main/LogInn.html">Min Profil</a></li>
+          <li class="cart-icon">
+            <a href="cart-page.html">
+              <img
+                src="/Pages/Images/ShoppingCartIcon.png"
+                alt="Shopping Cart"
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="thin-navbar">
+        <a href="/Pages/Produkt Sider HTML/Dekk.html">Dekk</a>
+        <a href="/Pages/Produkt Sider HTML/Felg.html">Felg</a>
+        <a href="/Pages/Kalkulator Sider/DekkKalkulator.html"
+          >Dekk kalkulator</a
+        >
+        <a href="/Pages/Kalkulator Sider/FelgKalkulator.html"
+          >Felg kalkulator</a
+        >
+        <a href="#" class="cart-icon">
+          <img src="/Pages/Images/ShoppingCartIcon.png" alt="Shopping Cart" />
+        </a>
+      </div>
+    </header>
+
+    <script type="text/javascript">
+      window.addEventListener("scroll", function () {
+        if (window.innerWidth > 767) {
+          var header = document.querySelector("header");
+          header.classList.toggle("sticky", window.scrollY > 0);
+        }
+      });
+
+      window.addEventListener("DOMContentLoaded", function () {
+        function updateScreenSizeClass() {
+          var htmlElement = document.documentElement;
+          var mediumScreenClass = "medium-screen";
+
+          if (window.innerWidth >= 768 && window.innerWidth <= 991) {
+            htmlElement.classList.add(mediumScreenClass);
+          } else {
+            htmlElement.classList.remove(mediumScreenClass);
+          }
+        }
+
+        updateScreenSizeClass();
+
+        window.addEventListener("resize", updateScreenSizeClass);
+      });
+    </script>
+
+    <section class="banner"></section>
+    <h1 class="section-title">Felg merker</h1>
+    <div class="sorting-buttons">
+      <a
+        href="link-to-all-products-page"
+        class="sort-button"
+        onclick="filterSelection('all')"
+        >Vis alle</a
+      >
+      <a
+        href="link-to-premium-products-page"
+        class="sort-button"
+        onclick="filterSelection('premium')"
+        >Premium</a
+      >
+      <a
+        href="link-to-quality-products-page"
+        class="sort-button"
+        onclick="filterSelection('quality')"
+        >Quality</a
+      >
+      <a
+        href="link-to-budget-products-page"
+        class="sort-button"
+        onclick="filterSelection('budget')"
+        >Budget</a
+      >
+    </div>
+    <div class="product-cards-container">
+      <!-- Product Card 1 -->
+      <a href="link-to-product2-page" class="product-card">
+        <img src="/Pages/Images/picture3.jpg" alt="Product 1" />
+        <h3>Alle felger</h3>
+        <p>
+          Her finner du alle felg som er <br />
+          tilgjengelige hos oss!
+        </p>
+      </a>
+
+      <!-- Product Card 2 -->
+      <a href="link-to-product2-page" class="product-card">
+        <img src="/Pages/Images/picture3.jpg" alt="Product 2" />
+        <h3>Mak</h3>
+        <p>
+          Mak er et anerkjent merke innen felgverdenen, kjent for sine
+          innovative og visuelt appellerende felgdesign som gir en unik og
+          stilig forbedring til ulike typer kjøretøy.
+        </p>
+      </a>
+
+      <!-- Product Card 3 -->
+      <a href="link-to-product2-page" class="product-card">
+        <img src="/Pages/Images/picture3.jpg" alt="Product 3" />
+        <h3>Vossen</h3>
+        <p>
+          Vossen er en anerkjent aktør i bilverdenen, kjent for luksuriøse og
+          skreddersydde smidde felger som gir kjøretøy en unik touch av luksus
+          og individualitet.
+        </p>
+      </a>
+
+      <!-- Product Card 4 -->
+      <a href="link-to-product2-page" class="product-card">
+        <img src="/Pages/Images/picture3.jpg" alt="Product 4" />
+        <h3>Dezent</h3>
+        <p>
+          Dezent er et anerkjent navn innen felgverdenen, kjent for stilfulle og
+          holdbare felgdesign som forbedrer utseendet og ytelsen til ulike
+          kjøretøyer.
+        </p>
+      </a>
+
+      <!-- Product Card 5 -->
+      <a href="link-to-product2-page" class="product-card">
+        <img src="/Pages/Images/picture3.jpg" alt="Product 5" />
+        <h3>Xtreme</h3>
+        <p>
+          Xtreme er kjent for robuste og holdbare hjul, designet for ekstreme
+          offroad-forhold, og gir pålitelighet og ytelse til terrengentusiaster
+        </p>
+      </a>
+
+      <!-- Product Card 6 -->
+      <a href="link-to-product2-page" class="product-card">
+        <img src="/Pages/Images/picture3.jpg" alt="Product 6" />
+        <h3>RC Design</h3>
+        <p>
+          RC Design er et veletablert navn i felgindustrien, anerkjent for sitt
+          stilige og distinkte design som imøtekommer både estetiske og
+          ytelsespreferanser blant bilentusiaster.
+        </p>
+      </a>
+
+      <!-- Product Card 7 -->
+      <a href="link-to-product2-page" class="product-card">
+        <img src="/Pages/Images/picture3.jpg" alt="Product 7" />
+        <h3>Brock</h3>
+        <p>
+          Brock er anerkjent for å produsere høykvalitets aluminiumsfelger som
+          kombinerer ytelse, stil og holdbarhet, og dermed er et populært valg
+          blant bilentusiaster.
+        </p>
+      </a>
+    </div>
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <h3>Kontakt oss</h3>
+          <p>E-post: TireX@info.no</p>
+          <p>Tlf: +47 457 33 876</p>
+          <p>
+            Addresse:
+            <a
+              href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x4641073dd575b493:0xf89c8554cc8c4621?sa=X&ved=2ahUKEwi9uv2hoNuEAxV7PxAIHeplBh0Q4kB6BAg0EAA"
+              target="_blank"
+              >Osloveien 16 3511 Hønefoss</a
+            >
+          </p>
+        </div>
+        <div class="footer-content">
+          <h3>Snarveier</h3>
+          <ul class="list">
+            <li><a href="Pages/Om-Oss.html">Om oss</a></li>
+            <li><a href="Pages/Personvern.html">Personvern</a></li>
+            <li><a href="Pages/Admin.html">Min Profil</a></li>
+          </ul>
+        </div>
+        <div class="footer-content">
+          <h3>Kategorier</h3>
+          <ul class="list">
+            <li><a href="#">Vinterdekk</a></li>
+
+            <li><a href="Felg.html">Felg</a></li>
+            <li><a href="#">Dekk</a></li>
+          </ul>
+        </div>
+        <div class="footer-content">
+          <h3>Andre</h3>
+          <ul class="list">
+            <li><a href="Pages/Personvern.html">Info</a></li>
+            <li><a href="LogInn.html">Admin</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="bottom-bar">
+        <p>&copy; @Tire-Xpress 2023</p>
+      </div>
+    </footer>
+  </body>
+</html>

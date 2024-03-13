@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" class="Dekk">
+  <head>
+    <!-- Your meta tags, title, and CSS links -->
+  </head>
+  <body>
+    <!-- Your header content -->
+
+    <!-- Product content -->
+    <div id="product-container">
+      <div id="product-info">
+        <h2 id="product-name">Continental 1</h2>
+        <p id="product-description">Car tire for winter use</p>
+        <p id="product-price">499kr</p>
+      </div>
+      <img
+        id="product-image"
+        src="/Pages/Images/picture2.jpg"
+        alt="Product Image"
+      />
+    </div>
+
+    <!-- Your footer content -->
+
+    <!-- JavaScript to handle product ID -->
+    <script>
+      window.addEventListener("DOMContentLoaded", function () {
+        // Get the product ID from the URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get("productId");
+
+        // Show the product corresponding to the product ID
+        showProduct(productId);
+      });
+
+      function showProduct(productId) {
+        // Fetch product data from a database or hardcoded data
+        const productData = getProductData(productId);
+
+        // Update product information
+        document.getElementById("product-name").innerText = productData.name;
+        document.getElementById("product-description").innerText =
+          productData.description;
+        document.getElementById("product-price").innerText = productData.price;
+
+        // Update product image
+        document.getElementById("product-image").src = productData.image;
+      }
+
+      function getProductData(productId) {
+        // Define your product data here, or fetch it from an external source
+        // Example hardcoded data:
+        const products = {
+          product1: {
+            name: "Continental 1",
+            description: "Description of Continental 1",
+            price: "$50",
+            image: "/Pages/Images/picture4.jpg",
+          },
+          // Add more products as needed
+        };
+
+        return products[productId];
+      }
+    </script>
+  </body>
+</html>
